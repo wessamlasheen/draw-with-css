@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #000;
+  border-bottom: 4px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: 500px;
+  height: 350px;
+  background-color: #eee;
+  box-shadow: 5px 5px 10px #d7d7d7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .body {
+  width: 60px;
+  height: 180px;
+  background-color: #ffddc0;
+  border: 3px solid orange;
+  border-bottom: none;
+  transform: rotate(2deg);
+  position: relative;
+}
+.body .nose {
+  background-color: #ffddc0;
+  border: 3px solid orange;
+  width: 40px;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  top: 22%;
+  left: -43px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+  transform: rotate(1deg);
+  z-index: 3;
+}
+.body .nose::after {
+  position: absolute;
+  content: "";
+  background-color: #ffddc0;
+  border-top: 3px solid orange;
+  top: -3px;
+  width: 12px;
+  height: 5px;
+  left: 99%;
+}
+.body .ear {
+  width: 20px;
+  height: 20px;
+  background-color: #ffddc0;
+  border: 3px solid orange;
+  border-radius: 50%;
+  border-left: none;
+  border-top: none;
+  position: absolute;
+  right: -18px;
+  top: 32%;
+  transform: rotate(-45deg);
+}
+.mouse {
+  position: absolute;
+  background-color: #ffddc0;
+  width: 10px;
+  height: 12px;
+  left: -10px;
+  top: 70%;
+  border-width: 3px;
+  border-style: solid;
+  border-right: none;
+  border-top: none;
+  border-color: orange transparent orange orange;
+  border-radius: 5px;
+  transform: skew(-39deg);
+}
+.body .eye1 {
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 20px;
+  left: 10px;
+  z-index: 2;
+}
+.body .eye1::before {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  width: 8px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.body .eye1::after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.body .eye2 {
+  position: absolute;
+  background-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000 #000 transparent #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 12px;
+  left: -15px;
+}
+.body .eye2::before {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  width: 8px;
+  height: 12px;
+  top: 57%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.body .eye2::after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
+  top: 62%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.body .hair {
+  position: relative;
+  z-index: 10;
+  left: 20px;
+  top: 9px;
+}
+.body .hair > div:nth-child(1) {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 100px;
+  height: 30px;
+  border-top: 20px solid green;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(31deg);
+}
+.body .hair > div:nth-child(2) {
+  position: absolute;
+  right: 10px;
+  top: -52px;
+  width: 100px;
+  height: 30px;
+  border-top: 20px solid green;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(60deg);
+}
+.body .hair > div:nth-child(3) {
+  position: absolute;
+  top: -59px;
+  right: 5px;
+  width: 100px;
+  height: 30px;
+  border-top: 20px solid green;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(120deg);
+}
+.body .hair > div:nth-child(4) {
+  position: absolute;
+  right: 0px;
+  top: -58px;
+
+  width: 100px;
+  height: 30px;
+  border-top: 20px solid green;
+  border-radius: 50px 40px 0 0;
+  transform: rotate(154deg);
+}
+/* end the face */
+
+/* start shanab */
+.shanab1 {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(calc(-50% - 35px));
+  box-shadow: 70px 0px 0 #000;
+}
+.shanab1::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 50px;
+  border-bottom: 100px solid #000;
+  border-radius: 0% 0% 0% 100%;
+  left: -30px;
+  top: -54px;
+  transform: rotate(-28deg);
+  transform-origin: right bottom;
+  animation: danceleft 1s infinite ease-in-out;
+}
+.shanab1::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 50px;
+  border-bottom: 100px solid #000;
+  border-radius: 0% 0% 100% 0%;
+  right: -100px;
+  top: -54px;
+  transform: rotate(26deg);
+  transform-origin: left bottom;
+  animation: danceright 1s infinite ease-in-out;
+}
+
+/* end shanab */
+
+@keyframes danceright {
+  0%,
+  100% {
+    transform: rotate(26deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes danceleft {
+  0%,
+  100% {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(-28deg);
+  }
+}
+
+/* start pokemon */
+
+.red {
+  border-width: 100px;
+  border-style: solid;
+  border-color: #f53e3e #f53e3e #ddd #ddd;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 5px 10px 4px #888;
+}
+.line {
+  position: absolute;
+  background-color: #444;
+  width: 200px;
+  height: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 10px solid #eee;
+  border-right: 10px solid #888;
+}
+.circle-inside {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #444;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.circle-inside::before {
+  background-color: #ddd;
+  width: 25px;
+  height: 25px;
+}
+.circle-inside::after {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+}
+.circle-inside::before,
+.circle-inside::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* end pokemon */
+
+/* start Homer Simpson */
+:root {
+  --yellow-color: #fed90f;
+  --cream-color: #d1b271;
+  --red-color: #de433f;
+  --border: 1px solid #4d4c4c;
+}
+.samir .box {
+  display: block;
+  position: relative;
+  background-color: var(--red-color);
+}
+.samir-body {
+  margin: 30px auto;
+  position: relative;
+  height: 250px;
+}
+.head {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-7deg);
+  width: 78px;
+  height: 80px;
+  background-color: var(--yellow-color);
+  border: var(--border);
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  z-index: 2;
+}
+/* eyes */
+.head::after {
+  position: absolute;
+  content: "";
+  top: 70%;
+  right: 11px;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border: var(--border);
+  border-radius: 50%;
+  z-index: 0;
+  box-shadow: 24px 0 0 #fff, 24px 0px 0px 1px #888;
+}
+.head::before {
+  position: absolute;
+  content: "";
+  top: 93%;
+  right: 30px;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 29px 0 0 #000;
+}
+
+.neck {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: 66px;
+  height: 100px;
+  background-color: var(--yellow-color);
+  border: var(--border);
+  border-top: none;
+  border-bottom: none;
+  transform: translateX(-50%) rotate(-1deg);
+  z-index: 1;
+}
+.samir .nose {
+  position: absolute;
+  content: "";
+  top: 96px;
+  right: 39%;
+  width: 27px;
+  height: 17px;
+  background-color: var(--yellow-color);
+  border: var(--border);
+  border-left: none;
+  border-radius: 0 50% 50% 0;
+  z-index: 4;
+}
+.samir .hair1 {
+  position: absolute;
+  top: 5px;
+  left: 43%;
+  width: 40px;
+  height: 30px;
+  border-top: 1px solid #000;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-36deg);
+}
+.samir .hair2 {
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  width: 40px;
+  height: 30px;
+  border-top: 1px solid #000;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-29deg);
+}
+.samir .ear {
+  position: absolute;
+  top: 110px;
+  left: 42%;
+  width: 15px;
+  height: 17px;
+  background-color: var(--yellow-color);
+  border: var(--border);
+  border-radius: 50%;
+  z-index: 10;
+}
+.samir .ear::after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #888;
+  border-radius: 50% 0% 0% 50%;
+}
+.samir .ear::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 1px;
+  width: 8px;
+  height: 4px;
+  border-top: 1px solid #888;
+  border-radius: 50%;
+}
+.samir .chemise1 {
+  position: absolute;
+  background-color: #fff;
+  width: 50px;
+  height: 28px;
+  border: var(--border);
+  border-radius: 4px;
+  top: 71%;
+  left: 42%;
+  z-index: 20;
+  transform: rotate(10deg);
+}
+.samir .chemise2 {
+  position: absolute;
+  background-color: #fff;
+  width: 10px;
+  height: 30px;
+  border: var(--border);
+  border-radius: 2px;
+  top: 73%;
+  left: 57%;
+  z-index: 20;
+  transform: rotate(-18deg);
+}
+.samir .circle-mouse {
+  position: absolute;
+  top: 44%;
+  left: 47%;
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #494848 transparent #494848 #494848;
+  border-radius: 50%;
+  background-color: var(--cream-color);
+  z-index: 30;
+  transform: rotate(-16deg);
+}
+.samir .circle-mouse::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 24px;
+  background-color: var(--cream-color);
+  border: var(--border);
+  border-top: none;
+  border-left: none;
+  border-bottom-right-radius: 59%;
+  border-top-right-radius: 0%;
+  left: 27px;
+  top: 24px;
+  transform: skew(33deg, 10deg) rotate(-2deg);
+}
+.samir .circle-mouse::before {
+  position: absolute;
+  content: "";
+  left: 44px;
+  top: 44px;
+  width: 8px;
+  height: 10px;
+  background-color: var(--cream-color);
+  border-radius: 50%;
+  border-right: var(--border);
+  transform: rotate(45deg);
+}
+.samir .under-nose {
+  position: absolute;
+  content: "";
+  top: 112px;
+  right: 39%;
+  width: 26px;
+  height: 17px;
+  background-color: var(--cream-color);
+  border: 1px solid #4d4c4c;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 50% 0% 0;
+  z-index: 4;
+}
+
+/* end Homer Simpson */
